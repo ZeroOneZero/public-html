@@ -15,51 +15,49 @@
 
 <body>
 <div class="perspective effect-laydown" id="perspective">
-	<div class="container">
-		<div class="wrapper">
-			<header class="page-header">
-				<div id="gConnect">
-					<h1>1&amp;0 Computer Care</h1>
-					<h3>Please sign-in to continue</h3>
-					<button class="g-signin" 
+  <div class="container">
+    <div class="wrapper">
+      <header class="page-header">
+        <div id="gConnect">
+          <h1>1&amp;0 Computer Care</h1>
+          <h3>Please sign-in to continue</h3>
+          <button class="g-signin" 
 						data-callback="onSignInCallback" 
 						data-clientid="946370981382-t59bdo8ovduujl4ejq6fd6gqr25tskbg.apps.googleusercontent.com" 
 						data-cookiepolicy="single_host_origin" 
 						data-requestvisibleactions="http://schemas.google.com/AddActivity" 
 						data-scope="https://www.googleapis.com/auth/plus.login" 
-						data-theme="dark">
-					</button>
-				</div><!-- gConnect -->
-				<div id="authOps" style="display:none">
-					<h2 class="fade brief big">Welcome to ...</h2>
-					<h1>1&amp;0 Computer Care</h1>
-					<h3 class="fade brief big">Hosted on the Cloud</h3>
-					<button class="button" id="disconnect">Disconnect</button>
-					<p>
-					<button id="showMenu">Show Menu</button>
-					</p>
-				</div><!-- /authOps -->
-			</header><!-- /page-header --> 
-		</div><!-- /wrapper --> 
-	</div><!-- /container -->
-	<nav class="outer-nav top horizontal">
-		<h3>My Sites:</h3>
-			<a href="about/index.html" class="icon-home">About Me</a> 
-			<a href="http://zeroonezero.github.io/bio/" class="icon-image" target="_blank">Bio</a> 
-			<a href="weebly/index.html" class="icon-upload" target="_blank">DIY</a>
-	<nav id="sub-nav">
-          <h3>Social Media:</h3>
-		  <div class="social"> 			
-		  <a class="wordpress" href="https://www.zero-one-zero.com/wordpress/"  target="_blank" title="Wordpress">Wordpress</a>
-          <a class="google" href="https://plus.google.com/116177733369709895821" target="_blank" title="Google+">Google+</a> 
-          <a class="twitter" href="https://twitter.com/RobertAdamsJr2" target="_blank" title="Twitter">Twitter</a> 
-          <a class="github" href="https://github.com/zeroonezero" target="_blank" title="GitHub">GitHub</a> 
-          <a class="linkedin" href="https://www.linkedin.com/in/1and0computercare" target="_blank" title="LinkedIn">LinkedIn</a> 
-          <a class="facebook" href="https://www.facebook.com/crazypants010" target="_blank" title="Facebook">Facebook</a> </div>
-        </nav>
-	</nav><!-- /menu -->
- </div><!-- /perspective -->
-<script src="assets/js/class-npro-menu.min.js"></script>
+						data-theme="dark"> </button>
+        </div>
+        <!-- gConnect -->
+        <div id="authOps" style="display:none">
+          <h2 class="fade brief big">Welcome to ...</h2>
+          <h1>1&amp;0 Computer Care</h1>
+          <h3 class="fade brief big">Hosted on the Cloud</h3>
+          <button class="button" id="disconnect">Disconnect</button>
+          <p>
+            <button id="showMenu">Show Menu</button>
+          </p>
+        </div>
+        <!-- /authOps --> 
+      </header>
+      <!-- /page-header --> 
+    </div>
+    <!-- /wrapper --> 
+  </div>
+  <!-- /container -->
+  <nav class="outer-nav top horizontal">
+    <h3>My Sites:</h3>
+    <a href="about/index.html" class="icon-home">About Me</a> <a href="http://zeroonezero.github.io/bio/" class="icon-image" target="_blank">Bio</a> <a href="weebly/index.html" class="icon-upload" target="_blank">DIY</a>
+    <nav id="sub-nav">
+      <h3>Social Media:</h3>
+      <div class="social"> <a class="wordpress" href="https://www.zero-one-zero.com/wordpress/"  target="_blank" title="Wordpress">Wordpress</a> <a class="google" href="https://plus.google.com/116177733369709895821" target="_blank" title="Google+">Google+</a> <a class="twitter" href="https://twitter.com/RobertAdamsJr2" target="_blank" title="Twitter">Twitter</a> <a class="github" href="https://github.com/zeroonezero" target="_blank" title="GitHub">GitHub</a> <a class="linkedin" href="https://www.linkedin.com/in/1and0computercare" target="_blank" title="LinkedIn">LinkedIn</a> <a class="facebook" href="https://www.facebook.com/crazypants010" target="_blank" title="Facebook">Facebook</a> </div>
+    </nav>
+  </nav>
+  <!-- /menu --> 
+</div>
+<!-- /perspective --> 
+<script src="assets/js/class-npro-menu.min.js"></script> 
 <script type="text/javascript">
 function onSignInCallback(a){helper.onSignInCallback(a)}var helper=function(){return{onSignInCallback:function(a){gapi.client.load("plus","v1").then(function(){$("#authResult").html("Auth Result:<br/>");for(var b in a)$("#authResult").append(" "+b+": "+a[b]+"<br/>");a.access_token?($("#authOps").show("slow"),$("#gConnect").hide()):a.error&&(console.log("There was an error: "+a.error),$("#authResult").append("Logged out"),$("#authOps").hide("slow"),$("#gConnect").show()),console.log("authResult",a)})},disconnect:function(){$.ajax({type:"GET",url:"https://accounts.google.com/o/oauth2/revoke?token="+gapi.auth.getToken().access_token,async:!1,contentType:"application/json",dataType:"jsonp",success:function(a){console.log("revoke response: "+a),$("#authOps").hide(),$("#authResult").empty(),$("#gConnect").show()},error:function(a){console.log(a)}})}}}();$(document).ready(function(){$("#disconnect").click(helper.disconnect),$("#loaderror").hide()});
 </script><!-- /GSign-in --> 
