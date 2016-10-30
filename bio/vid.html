@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>ZeroOneZero-Vids</title>
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+ <link href="css/main.min.css" rel="stylesheet" />
+
+  <style type="text/css">
+    #bgvid {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 0%;
+      min-height: 0%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Menu -->
+<nav class="menu" id="theMenu">
+<div class="menu-wrap">
+<h2 class="logo">
+<a href="http://cloud.zero-one-zero.com">Dropbox Home</a>
+</h2>
+<a href="http://git.zero-one-zero.com" target="_blank">Bio Page</a>
+<a href="vids.html" target="_blank">Music Vids</a>
+<a href="https://www.facebook.com/crazypants010" target="_blank"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/RobertAdamsJr2" target="_blank"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/115701069100838605281" target="_blank"><i class="fa fa-google-plus"></i></a>
+<a href="https://www.linkedin.com/in/1and0computercare" target="_blank"><i class="fa fa-linkedin"></i></a>
+<a class="g-hangout" data-render="createhangout"></a></div>
+<div id="menuToggle"><i class="fa fa-bars"></i></div>
+</nav>
+</div>
+<!-- /Menu -->
+  <video autoplay id="bgvid" loop src="images/pool.mp4"></video>
+  <!-- Menu -->
+<script>(function(){$("#menuToggle, .menu-close").on("click",function(){$("#menuToggle").toggleClass("active");$("body").toggleClass("body-push-toleft");$("#theMenu").toggleClass("menu-open")})})(jQuery)</script>
+<!-- /Menu -->
+</body>
+
+</html>
