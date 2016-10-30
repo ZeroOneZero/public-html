@@ -464,11 +464,11 @@ html,body,.perspective{
 	white-space:nowrap;
 	font-weight:300;
 	margin:0 0 30px;
-	color: #FFFFFF;
+	color: rgb(145, 117, 77);
 	-webkit-transition:color .3s;
 	transition:color .3s;
 	-webkit-transform-style:preserve-3d;
-	transform-style:preserve-3d
+	transform-style:preserve-3d;
 }
 
 .outer-nav a:hover{
@@ -524,7 +524,7 @@ html,body,.perspective{
 }
 
 .effect-laydown{
-	background:#b8b6b4
+	background: rgb(241, 250, 248);
 }
 
 .effect-laydown .container{
