@@ -1,3 +1,3 @@
 git add -A
-git commit -a -m "Commit"
+git commit -a -m "Updates"
 git push origin gh-pages
