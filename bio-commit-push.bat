@@ -1,3 +1,1 @@
-git add -A
-git commit -a -m "Updates"
-git push origin gh-pages
+call "C:\Users\Rob\Downloads\PortableGit\git-cmd.exe" git add -A && git commit -a -m "Updates" && git push origin gh-pages
