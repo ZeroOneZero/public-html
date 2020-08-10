@@ -1,136 +1,115 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>1&amp;0 Computer Care</title>
-    <meta content="Rob Adams Jr" name="author">
-    <link href="assets/css/index.min.css" rel="stylesheet" type="text/css">
-    <script src="assets/js/modernizr.custom.29475.js" />
-    <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript" />
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="14481093866-2i4epth81uic90vicetpuklc7leu4qk3.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer/>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title>1&amp;0 Computer Care</title>
+	<meta content="Rob Adams Jr" name="author">
+	<link href="assets/css/index.css" rel="stylesheet" type="text/css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<script src="assets/js/menu.js"></script>
+	<script src="assets/js/nprogress.js"></script>
+	<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<meta content="profile email" name="google-signin-scope">
+	<meta content="14481093866-2i4epth81uic90vicetpuklc7leu4qk3.apps.googleusercontent.com" name="google-signin-client_id">
+	<script async src="https://apis.google.com/js/platform.js">
+	</script>
 </head>
-
 <body>
-    <div class="perspective effect-laydown" id="perspective">
-        <div class="container">
-            <div class="wrapper">
-                <header class="page-header">
-                    <div id="gConnect">
-                        <h1>1&amp;0 Computer Care</h1>
-                        <h3>Please sign-in to continue</h3>
-                        <div class="my-signin2" data-onsuccess="onSignIn" data-onsuccess="authOps" data-theme="dark" />
-                        <script>
-                            function onSuccess(googleUser) {
-                                console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-                            }
+	<div class="perspective effect-laydown" id="perspective">
+		<div class="container">
+			<div class="wrapper">
+				<header class="page-header">
+					<div id="gConnect">
+						<h1>1&amp;0 Computer Care</h1>
+						<h3>Please sign-in to continue</h3>
+						<div class="my-signin2" data-onsuccess="authOps" data-theme="dark"></div>
+						<script>
+						function onSuccess(googleUser) {
+						console.log("Logged in as: " + googleUser.getBasicProfile().getName());
+						}
 
-                            function onFailure(error) {
-                                console.log(error);
-                            }
+						function onFailure(error) {
+						console.log(error);
+						}
 
-                            function renderButton() {
-                                gapi.signin2.render('my-signin2', {
-                                    'scope': 'profile email',
-                                    'width': 240,
-                                    'height': 50,
-                                    'longtitle': true,
-                                    'theme': 'dark',
-                                    'onsuccess': onSuccess,
-                                    'onfailure': onFailure
-                                });
-                            }
-                        </script>
-                    </div>
-                    <!-- gConnect -->
-                    <div id="authOps" style="display:none">
-                        <h2 class="fade brief big">Welcome to ...</h2>
-                        <h1>1&amp;0 Computer Care</h1>
-                        <h3 class="fade brief big">Hosted on the Cloud</h3>
-                        <a href="#" onclick="signOut();">Sign out</a>
-                        <script>
-                            function signOut() {
-                                var auth2 = gapi.auth2.getAuthInstance();
-                                auth2.signOut().then(function() {
-                                    console.log('User signed out.');
-                                });
-                            }
-                        </script>
-                        <p>
-                            <button id="showMenu">Show Menu</button>
-                        </p>
-                    </div>
-                    <!-- /authOps -->
-                </header>
-                <!-- /page-header -->
-            </div>
-            <!-- /wrapper -->
-        </div>
-
-<!-- Load Facebook SDK for JavaScript -->
-      <div id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v5.0'
-          });
-        };
-
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-
-      <!-- Your customer chat code -->
-      <div class="fb-customerchat"
-        attribution=setup_tool
-        page_id="1851723061729478">
-      </div>
-        <!-- /container -->
-        <nav class="outer-nav top horizontal">
-            <h4>Links</h4>
-            <a href="bio/index.html" class="icon-image" target="_blank">Bio</a>
-            <a href="weebly/index.html" class="icon-upload" target="_blank">Do It Yourself</a>
-            <nav id="sub-nav">
-                <div class="social">
-                    <a class="github" href="https://github.com/zeroonezero" target="_blank" title="GitHub">GitHub</a>
-                    <a class="facebook" href="https://www.facebook.com/1and0cc/" target="_blank" title="Facebook">Facebook</a>
-                </div>
-            </nav>
-        </nav>
-        <!-- /menu -->
-    </div>
-    <!-- /perspective -->
-    <script src="assets/js/class-npro-menu.min.js" />
-    <script>
-        $("body").show();
-        $(".version").text(NProgress.version);
-        NProgress.start();
-        setTimeout(function() {
-            NProgress.done();
-            $(".fade").removeClass("out")
-        }, 1000)
-    </script>
-    <!-- /NProgress -->
-    <script>
-        (function() {
-            $("#menuToggle, .menu-close").on("click", function() {
-                $("#menuToggle").toggleClass("active");
-                $("body").toggleClass("body-push-toleft");
-                $("#theMenu").toggleClass("menu-open")
-            })
-        })(jQuery)
-    </script>
-    <!-- /Menu -->
+						function renderButton() {
+						gapi.signin2.render("my-signin2", {
+						  scope: "profile email",
+						  width: 240,
+						  height: 50,
+						  longtitle: true,
+						  theme: "dark",
+						  onsuccess: onSuccess,
+						  onfailure: onFailure,
+						});
+						}
+						</script>
+					</div><!-- gConnect -->
+					<div id="authOps" style="display:none">
+						<h2 class="fade brief big">Welcome to ...</h2>
+						<h1>1&amp;0 Computer Care</h1>
+						<h3 class="fade brief big">Hosted on the Cloud</h3><a href="#" onclick="signOut();">Sign out</a> 
+						<script>
+						function signOut() {
+						var auth2 = gapi.auth2.getAuthInstance();
+						auth2.signOut().then(function() {
+						  console.log("User signed out.");
+						});
+						}
+						</script>
+						<p><button id="showMenu">Show Menu</button></p>
+					</div><!-- /authOps -->
+				</header><!-- /page-header -->
+			</div><!-- /wrapper -->
+		</div><!-- Load Facebook SDK for JavaScript -->
+		<div id="fb-root"></div>
+		<script>
+		window.fbAsyncInit = function() {
+		  FB.init({
+		      xfbml: true,
+		      version: "v5.0",
+		  });
+		};
+		(function(d, s, id) {
+		  var js,
+		      fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s);
+		  js.id = id;
+		  js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+		  fjs.parentNode.insertBefore(js, fjs);
+		})(document, "script", "facebook-jssdk");
+		</script> <!-- Your customer chat code -->
+		<div class="fb-customerchat"></div><!-- /container -->
+		<nav class="outer-nav top horizontal">
+			<h4>Links</h4><a class="icon-image" href="bio/index.html" target="_blank">Bio</a> <a class="icon-upload" href="weebly/index.html" target="_blank">Do It Yourself</a>
+			<nav id="sub-nav">
+				<div class="social">
+					<a class="github" href="https://github.com/zeroonezero" target="_blank" title="GitHub">GitHub</a> <a class="facebook" href="https://www.facebook.com/1and0cc/" target="_blank" title="Facebook">Facebook</a>
+				</div>
+			</nav>
+		</nav><!-- /menu -->
+	</div><!-- /perspective -->
+	<script>
+	$("body").show();
+	$(".version").text(NProgress.version);
+	NProgress.start();
+	setTimeout(function() {
+	   NProgress.done();
+	   $(".fade").removeClass("out");
+	}, 1000);
+	</script> <!-- /NProgress -->
+	 
+	<script>
+	(function() {
+	   $("#menuToggle, .menu-close").on("click", function() {
+	       $("#menuToggle").toggleClass("active");
+	       $("body").toggleClass("body-push-toleft");
+	       $("#theMenu").toggleClass("menu-open");
+	   });
+	})(jQuery);
+	</script> <!-- /Menu -->
 </body>
-
 </html>
