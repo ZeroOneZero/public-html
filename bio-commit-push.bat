@@ -1,1 +1,3 @@
-call "C:\Users\Rob\Downloads\PortableGit\git-cmd.exe" git add -A && git commit -a -m "Updates" && git push origin gh-pages
+git add -A
+git commit -a -m "Commit"
+git push origin gh-pages

@@ -1,118 +1,275 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
+
 <head>
-	<meta charset="UTF-8">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<title>1&amp;0 Computer Care</title>
-	<meta content="Rob Adams Jr" name="author">
-	<link href="assets/css/index.css" rel="stylesheet" type="text/css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-	<script src="assets/js/menu.js"></script>
-	<script src="assets/js/nprogress.js"></script>
-	<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<meta name="google-signin-client_id" content="14481093866-2i4epth81uic90vicetpuklc7leu4qk3.apps.googleusercontent.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZeroOneZero</title>
+  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="style/style.css" media="all" rel="stylesheet" type="text/css">
+  <link href="style/responsive.css" media="all" rel="stylesheet" type="text/css">
 </head>
-<body>
-	<div class="perspective effect-laydown" id="perspective">
-		<div class="container">
-			<div class="wrapper">
-				<header class="page-header">
-					<div id="gConnect">
-						<h1>1&amp;0 Computer Care</h1>
-						<h3>Please sign-in to continue</h3>
-						<div class="g-signin2" data-onsuccess="onSuccess" data-onsuccess="authOps"></div>
-						<script>
-						function onSuccess(googleUser) {
-						var profile = googleUser.getBasicProfile();
-						console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-						console.log('Name: ' + profile.getName());
-						console.log('Image URL: ' + profile.getImageUrl());
-						console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-						}
 
-						function onFailure(error) {
-						console.log(error);
-						}
+<body class="home blog light pattern1">
+  <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v5.0'
+          });
+        };
 
-						function renderButton() {
-						gapi.signin2.render("my-signin2", {
-						  scope: "profile email",
-						  width: 240,
-						  height: 50,
-						  longtitle: true,
-						  theme: "dark",
-						  onsuccess: onSuccess,
-						  onfailure: onFailure,
-						});
-						}
-						</script>
-					</div><!-- gConnect -->
-					<div id="authOps" style="display:none">
-						<h2 class="fade brief big">Welcome to ...</h2>
-						<h1>1&amp;0 Computer Care</h1>
-						<h3 class="fade brief big">Hosted on the Cloud</h3>
-							<a href="#" onclick="signOut();">Sign out</a>
-								<script>
-								function signOut() {
-								var auth2 = gapi.auth2.getAuthInstance();
-								auth2.signOut().then(function () {
-								console.log('User signed out.');
-								});
-								}
-								</script>
-						<p><button id="showMenu">Show Menu</button></p>
-					</div><!-- /authOps -->
-				</header><!-- /page-header -->
-			</div><!-- /wrapper -->
-		</div><!-- Load Facebook SDK for JavaScript -->
-		<div id="fb-root"></div>
-		<script>
-		window.fbAsyncInit = function() {
-		  FB.init({
-		      xfbml: true,
-		      version: "v5.0",
-		  });
-		};
-		(function(d, s, id) {
-		  var js,
-		      fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s);
-		  js.id = id;
-		  js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-		  fjs.parentNode.insertBefore(js, fjs);
-		})(document, "script", "facebook-jssdk");
-		</script> <!-- Your customer chat code -->
-		<div class="fb-customerchat"></div><!-- /container -->
-		<nav class="outer-nav top horizontal">
-			<h4>Links</h4><a class="icon-image" href="bio/index.html" target="_blank">Bio</a> <a class="icon-upload" href="weebly/index.html" target="_blank">Do It Yourself</a>
-			<nav id="sub-nav">
-				<div class="social">
-					<a class="github" href="https://github.com/zeroonezero" target="_blank" title="GitHub">GitHub</a> <a class="facebook" href="https://www.facebook.com/1and0cc/" target="_blank" title="Facebook">Facebook</a>
-				</div>
-			</nav>
-		</nav><!-- /menu -->
-	</div><!-- /perspective -->
-	<script>
-	$("body").show();
-	$(".version").text(NProgress.version);
-	NProgress.start();
-	setTimeout(function() {
-	   NProgress.done();
-	   $(".fade").removeClass("out");
-	}, 1000);
-	</script> <!-- /NProgress -->
-	 
-	<script>
-	(function() {
-	   $("#menuToggle, .menu-close").on("click", function() {
-	       $("#menuToggle").toggleClass("active");
-	       $("body").toggleClass("body-push-toleft");
-	       $("#theMenu").toggleClass("menu-open");
-	   });
-	})(jQuery);
-	</script> <!-- /Menu -->
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your customer chat code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="1851723061729478">
+      </div>
+  <div class="switherHead"></div>
+  <div class="colored">
+    <div class="blue"></div>
+    <div class="aqua"></div>
+    <div class="green"></div>
+    <div class="yellow"></div>
+    <div class="red"></div>
+  </div>
+  <div class="hfeed site" id="page">
+    <header class="site_header" id="header">
+      <div class="social_links">
+        <ul>
+          <li class="fb">
+            <a href="https://www.facebook.com/crazypants010" target="_blank" title="Facebook"></a>
+          </li>
+          <li class="tw">
+            <a href="https://twitter.com/RobertAdamsJr2" target="_blank" title="Twitter"></a>
+          </li>
+          <li class="gplus">
+            <a href="https://plus.google.com/115701069100838605281" target="_blank" title="Google+"></a>
+          </li>
+          <li class="lnkd">
+            <a href="https://www.linkedin.com/in/1and0computercare" target="_blank" title="Linkedin"></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div id="main">
+      <div class="content_area" id="primary">
+        <div class="site_content" id="content">
+            <div class="section_header profile_section_header opened">
+              <h2 class="section_title profile_section_title vis"><a><span class="icon icon-user"></span> <span class="section_name">Profile</span></a><span class="section_icon"></span></h2>
+              <div id="profile_header">
+                <div id="profile_user">
+                  <div id="profile_photo"><img alt="Robert Adams" src="images/table/Profile.jpg">
+                  </div>
+                  <div id="profile_name_area">
+                    <div id="profile_name">
+                      <h1 id="profile_title"><span class="firstname">Rob</span> <span class="lastname">Adams Jr</span></h1>
+                      <h4 id="profile_position">Developer</h4>
+                    </div>
+                  </div>
+                </div>
+                <div id="profile_data">
+                  <div class="profile_row name"><span class="th">Name:</span><span class="td">Rob Adams Jr</span>
+                  </div>
+                  <div class="profile_row birth"><span class="th">Date of birth:</span><span class="td">May 19, 1985</span>
+                  </div>
+                  <div class="profile_row address"><span class="th">Address:</span><span class="td">Festus, MO, US</span>
+                  </div>
+                  <div class="profile_row phone"><span class="th">Phone:</span><span class="td">+1-636-465-9420</span>
+                  </div>
+                  <div class="profile_row email"><span class="th">Email:</span><span class="td">crazypants010@gmail.com</span>
+                  </div>
+                  <div class="profile_row website"><span class="th">Website:</span><span class="td"><a href="http://cloud.zero-one-zero.com" target="_blank">Blog@Dropbox</a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section_body profile_section_body">
+              <div class="proile_body">
+                <p>I have roughly 17 years of computer experience including but not limited to IT (Information Technology) fields in both the Military and Corporate worlds. Currently I am working towards my Computer Security Degree. Serving in the US Army for three years afforded me the opportunity to continue my education even after I served my time.</p>
+                <p>The '1&amp;0' in my company name '1&amp;0 Computer Care' refers to the Binary Number system in which all computers use. It is a simple yet complex string of 1's and 0's. It allows our computers to perform all manner of operations, from turning on a light bulb to listening to the heart of a baby still in the womb. Although you may not see the 010's you can bet they are there.</p>
+              </div>
+            </div>
+          </section>
+          <div id="mainpage_accordion_area">
+            <!-- RESUME -->
+            <section class="section resume_section even" id="resume">
+              <div id="resume_buttons"><a href="print.html" id="resume_link" target="_blank"><span class="label">Print</span><span class="icon-print icon"></span></a> <a href="resume.pdf" id="resume_link_download" target="_blank"><span class="label">Download</span><span class="icon-download icon"></span></a>
+              </div>
+              <div class="section_header resume_section_header">
+                <h2 class="section_title resume_section_title"><a><span class="icon icon-align-left"></span><span class="section_name">Resume</span></a> <span class="section_icon"></span></h2>
+              </div>
+              <div class="section_body resume_section_body">
+                <div class="sidebar resume_sidebar">
+                  <aside class="widget widget_skills">
+                    <h3 class="widget_title">Program Skills</h3>
+                    <div class="widget_inner style_1">
+                      <div class="skills_row odd first"><span class="caption">Windows Server</span><span class="progressbar"><span class="progress blue" data-process="70%"><span class="value">70%</span></span>
+                        </span>
+                      </div>
+                      <div class="skills_row even"><span class="caption">Domain/DNS</span><span class="progressbar"><span class="progress aqua" data-process="75%"><span class="value">75%</span></span>
+                        </span>
+                      </div>
+                      <div class="skills_row odd"><span class="caption">HTML/CSS/JavaScript</span><span class="progressbar"><span class="progress green" data-process="83%"><span class="value">83%</span></span>
+                        </span>
+                      </div>
+                      <div class="skills_row even"><span class="caption">Website Hosting/Management</span><span class="progressbar"><span class="progress yellow" data-process="90%"><span class="value">90%</span></span>
+                        </span>
+                      </div>
+                      <div class="skills_row odd"><span class="caption">MySQL</span><span class="progressbar"><span class="progress red" data-process="70%"><span class="value">70%</span></span>
+                        </span>
+                      </div>
+                    </div>
+                  </aside>
+                  <aside class="widget widget_skills">
+                    <h3 class="widget_title">Other Skills</h3>
+                    <div class="widget_inner style_2">
+                      <div class="skills_row odd"><span class="legend blue"></span><span class="caption">Adobe Photoshop</span>
+                      </div>
+                      <div class="skills_row even"><span class="legend aqua"></span><span class="caption">Adobe Dreamweaver</span>
+                      </div>
+                      <div class="skills_row odd"><span class="legend green"></span><span class="caption">#</span>
+                      </div>
+                      <div class="skills_row even"><span class="legend yellow"></span><span class="caption">#</span>
+                      </div>
+                      <div class="skills_row odd"><span class="legend red"></span><span class="caption">#</span>
+                      </div>
+                      <div class="svg"></div>
+                    </div>
+                  </aside>
+                </div>
+                <div class="wrapper resume_wrapper">
+                  <div class="category resume_category resume_category_1 first even">
+                    <div class="category_header resume_category_header">
+                      <h3 class="category_title"><span class="category_title_icon aqua"></span>Employment</h3>
+                    </div>
+                    <div class="category_body resume_category_body">
+                      <article class="post resume_post resume_post_1 first even">
+                        <div class="post_header resume_post_header">
+                          <div class="resume_period"><span class="period_from">2006</span> - <span class="period_to">2009</span>
+                          </div>
+                          <h4 class="post_title"><span class="post_title_icon aqua"></span><a>US Military</a></h4>
+                          <h5 class="post_subtitle">14J ARMY</h5>
+                        </div>
+                        <div class="post_body resume_post_body">
+                          <p>I Operated/Maintained Air Defense Systems.</p>
+                        </div>
+                      </article>
+                      <article class="post resume_post resume_post_2 odd">
+                        <div class="post_header resume_post_header">
+                          <div class="resume_period"><span class="period_from">2009</span> - <span class="period_to period_present">2014</span>
+                          </div>
+                          <h4 class="post_title"><span class="post_title_icon aqua"></span><a>Northrop Grumman</a></h4>
+                          <h5 class="post_subtitle">Information Technology</h5>
+                        </div>
+                        <div class="post_body resume_post_body">
+                          <p>Started out a Military Trainer, later IT Department.</p>
+                        </div>
+                      </article>
+                      <article class="post resume_post resume_post_2 odd">
+                        <div class="post_header resume_post_header">
+                          <div class="resume_period"><span class="period_from">2014</span> - <span class="period_to period_present">Present</span>
+                          </div>
+                          <h4 class="post_title"><span class="post_title_icon aqua"></span><a>1&amp;0 Computer Care</a></h4>
+                          <h5 class="post_subtitle">Computer Services</h5>
+                        </div>
+                        <div class="post_body resume_post_body">
+                          <p>Performs all types of Services. PC Repair/Upgrades, Networking Admin.</p>
+                        </div>
+                      </article>
+                    </div>
+                    <!-- .category_body -->
+                  </div>
+                  <!-- .category -->
+                  <div class="category resume_category resume_category_2 odd">
+                    <div class="category_header resume_category_header">
+                      <h3 class="category_title"><span class="category_title_icon green"></span>Education</h3>
+                    </div>
+                    <div class="category_body resume_category_body">
+                      <article class="post resume_post resume_post_1 first even">
+                        <div class="post_header resume_post_header">
+                          <div class="resume_period"><span class="period_from">2012</span> - <span class="period_to">2014</span>
+                          </div>
+                          <h4 class="post_title"><span class="post_title_icon green"></span><a>ITT Technical Institute</a></h4>
+                          <h5 class="post_subtitle">Computer Information Systems</h5>
+                        </div>
+                        <div class="post_body resume_post_body">
+                          <p>Spent a year learning CIS at ITT.</p>
+                        </div>
+                      </article>
+                      <article class="post resume_post resume_post_2 odd">
+                        <div class="post_header resume_post_header">
+                          <div class="resume_period"><span class="period_from">2014</span> - <span class="period_to">present</span>
+                          </div>
+                          <h4 class="post_title"><span class="post_title_icon green"></span><a>Arizona Western College</a></h4>
+                          <h5 class="post_subtitle">Computer Information Systems</h5>
+                        </div>
+                        <div class="post_body resume_post_body">
+                          <p>Continuing my education.</p>
+                        </div>
+                      </article>
+                    </div>
+                    <!-- /category_body -->
+                  </div>
+                  <!-- /category -->
+                </div>
+                <!-- /wrapper -->
+              </div>
+              <!-- /section_body -->
+            </section>
+            <!-- /RESUME-->
+            <!-- CONTACTS -->
+            <section class="section contact_section even" id="contact">
+              <div class="section_header contact_section_header">
+                <h2 class="section_title contact_section_title"><a><span class="icon icon-envelope-alt"></span><span class="section_name">Contacts</span></a><span class="section_icon"></span></h2>
+              </div>
+              <div class="section_body contact_section_body">
+                <div class="contact_form">
+                  <div class="contact_form_data">
+                    <div class="sc_contact_form">
+                      <h3 class="title">Let's keep in touch</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- .section_body -->
+            </section>
+            <!-- /CONTACT -->
+            </div>
+            <!-- #mainpage_accordion_area -->
+          </div>
+          <!-- #content -->
+        </div>
+        <!-- #primary -->
+      </div>
+      <!-- #main -->
+      <footer class="site_footer" id="footer">
+        <div class="footer_copyright">1&amp;0 Computer Care &copy; 2015 All Rights Reserved</div>
+      </footer>
+    </div>
+    <!-- #page -->
+    <!-- connect js -->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery.tools.custom.js" type="text/javascript"></script>
+    <script src="js/jquery.flexslider.min.js" type="text/javascript"></script>
+    <script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
+    <script src="js/jquery.isotope.min.js" type="text/javascript"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="js/mediaelement.min.js" type="text/javascript"></script>
+    <script src="js/jquery.qrcode-0.7.0.min.js" type="text/javascript"></script>
+    <script src="js/jquery.easing.js" type="text/javascript"></script>
+    <script src="js/jquery.reject.js" type="text/javascript"></script>
+    <script src="js/utils.js" type="text/javascript"></script>
+    <script src="js/lib.js" type="text/javascript"></script>
 </body>
+
 </html>
